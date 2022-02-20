@@ -1,12 +1,21 @@
 #!/bin/bash 
+stim_len=10
+i=0
+h=0
+t=0
 
-flip=$((RANDOM%2))
+while [ $i -lt $stim_len ]
+do
+    flip=$((RANDOM%2))
+    case $flip in
+        0)
+            h=$(($h+1))
+            ;;
+        1)
+            t=$(($t+1))
+            ;;
+    esac
+    i=$(($i+1))
+done
 
-case $flip in
-    0)
-        echo "Heads"
-        ;;
-    1)
-        echo "Tails"
-        ;;
-esac
+echo "Head Frequency: "$h "Tail Frequency: "$t
