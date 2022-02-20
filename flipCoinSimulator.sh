@@ -1,21 +1,41 @@
 #!/bin/bash 
-stim_len=10
-i=0
 h=0
 t=0
+stim_len=21
 
-while [ $i -lt $stim_len ]
+while :
 do
+    check=0
     flip=$((RANDOM%2))
     case $flip in
         0)
             h=$(($h+1))
+            if [ $h -eq $stim_len ]
+            then
+                check=1
+            fi
             ;;
         1)
             t=$(($t+1))
+            if [ $t -eq $stim_len ]
+            then
+                check=1
+            fi
             ;;
     esac
-    i=$(($i+1))
+    if [ $check -eq 1 ]
+    then
+        break
+    fi
 done
 
-echo "Head Frequency: "$h "Tail Frequency: "$t
+#echo "Head Frequency: "$h "Tail Frequency: "$t
+if [ $h -gt $t ]
+then 
+    echo "Head won by" $(($h-$t)) "times."
+elif [ $t -gt $h ]
+then 
+    echo "Tails won by" $(($t-$h)) "times."
+else
+    "Its A Tie!!"
+fi
