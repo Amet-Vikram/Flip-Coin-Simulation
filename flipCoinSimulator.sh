@@ -3,7 +3,7 @@ h=0
 t=0
 stim_len=21
 
-new_variable="This is just a temp variable. This is just another change that I had to make lol."
+new_variable="This is just a temp variable."
 
 echo $new_variable
 
