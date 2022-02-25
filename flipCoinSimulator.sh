@@ -3,6 +3,10 @@ h=0
 t=0
 stim_len=21
 
+new_variable="This is just a temp variable"
+
+echo $new_variable
+
 while :
 do
     check=0
