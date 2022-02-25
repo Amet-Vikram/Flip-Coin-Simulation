@@ -3,9 +3,10 @@ h=0
 t=0
 stim_len=21
 
-new_variable="This is just a temp variable. This is just another change that I had to make lol."
+new_variable="This is just a temp variable."
+new_variable2="Created this to evoke a conflict. Sasta terrorism lol."
 
-echo $new_variable
+echo $new_variable $new_variable2
 
 while :
 do
