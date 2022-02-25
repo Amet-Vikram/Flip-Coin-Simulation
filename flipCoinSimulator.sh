@@ -4,7 +4,7 @@ t=0
 stim_len=21
 
 new_variable="This is just a temp variable."
-new_variable2="Created this to evoke a conflict. Sasta terrorism lol."
+new_variable2="New changes in Master Branch. Not to be seen in the local branch."
 
 echo $new_variable $new_variable2
 
